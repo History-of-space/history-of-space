@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>История освоения космоса</title>
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+
+    <style>
+        .one {
+            background-image: url('%D1%84%D0%BE%D0%BD%201.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+
+            font-family: ' 'Roboto', sans-serif;';
+
+        }
+
+        .one p {
+            background-color: rgba(0, 0, 0, 0.00);
+            padding: 20px;
+            color: white;
+            margin-bottom: 30px
+
+        }
+
+
+        .one h1 {
+
+            padding: 5px;
+            color: white;
+
+            text-align: left;
+        }
+
+        ul.nav {
+            margin-left: 10px;
+            padding-left: 10px;
+            list-style: none;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        ul.navbar li {
+            float: left;
+        }
+
+        ul.navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul.navbar li a:hover {
+            background-color: #111;
+        }
+
+        .two {
+            background-image: url('%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9%20%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D1%81%D0%BF%D1%83%D1%82%D0%BD%D0%B8%D0%BA.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+
+        }
+
+        .two p {
+            background-color: rgba(0, 0, 0, 0.05);
+            text-align: left;
+            color: white;
+            font-size: 27px;
+            padding: 8px;
+        }
+
+        .two h2 {
+            color: white;
+            text-align: center;
+            font-size: 27px;
+        }
+
+        ё .image-container {
+            display: flex;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: auto;
+
+        }
+        #test div{
+            margin-bottom: 3px;
+
+        }
+        .correct {
+            border: 3px solid green;
+        }
+        .victorina{
+            background-image: url('%D1%84%D0%BE%D0%BD%20%D0%B2%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B0.jpg');
+            background-color: rgba(0, 0, 0, 0.00);
+            padding: 30px;
+            color: white;
+            margin-bottom: 30px ;
+            text-align: left;
+            font-size: 27px
+        }
+        .incorrect {
+            border: 3px solid red;
+        }
+        #calendar {
+        text-align: center;
+      }
+        .planet-label {
+            font-weight: bold;
+            font-size: 27px;
+
+        }
+        .weight{
+            background-image: url('%D1%84%D0%BE%D0%BD%20%D0%B2%D0%B5%D1%81%D1%8B.jpg');
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            color: white;
+            text-align: left;
+            font-size: 27px
+
+        }
+        .weight p{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .result {
+            font-size: 18px;
+        }
+#slider {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+}
+
+#slider img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#slider img.active {
+  display: block;
+}
+         .three {
+            background-image: url('%D1%84%D0%BE%D0%BD%20%D1%81%20%D0%B3%D0%B0%D0%B3%D0%B0%D1%80%D0%B8%D0%BD%D1%8B%D0%BC.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 5px;
+        }
+
+        .three p {
+            background-color: rgba(0, 0, 0, 0.05);
+            text-align: left;
+            color: white;
+            font-size: 27px;
+            padding-left: 5px
+        }
+
+        .three h2 {
+            color: white;
+            text-align: center;
+            font-size: 27px;
+        }
+        .four {
+            background-image: url('%D1%84%D0%BE%D0%BD%20%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%8D%D1%80%D0%B0.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 5px;
+        }
+        .four p {
+            background-color: rgba(0, 0, 0, 0.05);
+            text-align: left;
+            color: white;
+            font-size: 27px;
+            padding-left: 5px
+        }
+
+        .four h2 {
+            color: white;
+            text-align: center;
+            font-size: 27px;
+        }
+        .five {
+            background-image: url('mks.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 5px;
+        }
+
+        .five p {
+            background-color: rgba(0, 0, 0, 0.05);
+            text-align: left;
+            color: white;
+            font-size: 27px;
+            padding-left: 5px
+        }
+
+        .five h2 {
+            color: white;
+            text-align: center;
+            font-size: 27px;
+        }
+
+
+           .six {
+            background-image: url('%D1%84%D0%BE%D0%BD%20%D1%80%D0%B0%D0%B7%D0%B2%D0%B5%D0%B4%D0%BA%D0%B0.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 5px;
+        }
+
+        .six p {
+            background-color: rgba(0, 0, 0, 0.05);
+            text-align: left;
+            color: white;
+            font-size: 27px;
+            padding-left: 5px
+        }
+
+        .six h2 {
+            color: white;
+            text-align: center;
+            font-size: 27px;
+        }
+         .seven {
+            background-image: url('%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%20%D0%B2%20%D0%BA%D0%BE%D1%81%D0%BC%D0%BE%D1%81%D0%B5%20%D1%84%D0%BE%D0%BD.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 5px;
+        }
+
+        .seven p {
+            background-color: rgba(0, 0, 0, 0.1);
+            text-align: left;
+            color: white;
+            font-size: 27px;
+            padding-left: 5px
+        }
+
+        .seven h2 {
+            color: white;
+            text-align: center;
+            font-size: 27px;
+        }
+        .eight {
+            background-image: url('%D1%84%D0%BE%D0%BD%20%D0%BA%D0%BE%D1%81%D0%BC%D0%BE%D0%BD%D0%B0%D0%B2%D1%82%20%D0%B7%D0%B0%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 5px;
+        }
+
+        .eight p {
+            background-color: rgba(0, 0, 0, 0.1);
+            text-align: left;
+            color: white;
+            font-size: 27px;
+            padding-left: 5px
+        }
+
+        .eight h2 {
+            color: white;
+            text-align: center;
+            font-size: 27px;
+        }
+        .weight
+    </style>
+</head>
+
+<body>
+
+    <ul class="navbar">
+        <li><a href="#one">Введение</a></li>
+        <li><a href="#two">Первые шаги</a></li>
+        <li><a href="#three">Гонка в космосе</a></li>
+
+        <li><a href="#four">Новая эра</a></li>
+        <li><a href="#five">МКС</a></li>
+        <li><a href="#six">Разведки</a></li>
+        <li><a href="#seven">Миссии будущего</a></li>
+        <li><a href="#eight">Заключение</a></li>
+        <li><a href="#test">Викторина</a></li>
+        <li><a href="#weight">Калькулятор веса и календарь</a></li>
+    </ul>
+    <section id="one">
+
+        <div class="one">
+            <div class="image-container">
+                <img src="%D0%B3%D0%B0%D0%B3%D0%B0%D1%80%D0%B8%D0%BD.jpg" alt="Image 4">
+                <img src="%D1%81%D0%BF%D1%83%D1%82%D0%BD%D0%B8%D0%BA%20%D0%B2%20%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%83.jpg" alt="Image 1">
+                <img src="%D1%86%D0%B8%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9.jpg" alt="Image 2">
+                <img src="%D0%BA%D0%BE%D1%81%D0%BC%D0%BE%D0%BD%D0%B0%D0%B2%D1%82%20%D0%BC%D0%BA%D1%81.jpg" alt="Image 3">
+
+            </div>
+            <div class="container">
+
+                <div class="text-box">
+                    <p style="font-size: 23px;" "color: #eddfe2" ;>Взорами тысяч людей, устремлённых ввысь, украшено небо. О космосе люди задумывались с давних времён, астрономия связала в себе все фундаментальные науки. <br>Благодаря этим исследованиям мы получаем уникальные данные и достигаем новых рубежов! <br>Это ли не достойный результат упорных трудов?
+                        Как же всё начиналось?</p>
+                </div>
+            </div>
+
+            <hr align="center" width="2500" size="1" color=" #eddfe2 " />
+            <h1 style="font-size: 30px;" ; color=: "#eddfe2" ; align="center" ; ;>История освоения космоса</h1>
+            <hr align="center" width="2500" size="1" color=" #eddfe2 " />
+            </p>
+        </div>
+    </section>
+    <div class="two-block">
+        <section id="two">
+            <div class="two">
+
+
+                <div class="container">
+                    <div class="text-box">
+                        <p>
+                        <p style="font-size: 24px;" text-align: right;> Спу́тник-1 — первый в мире искусственный спутник Земли, советский космический аппарат, запущенный на орбиту 4 октября 1957 года. </p>
+                        <p style="font-size: 24px;" text-align: right;> Кодовое обозначение спутника — «ПС-1» («Простейший Спутник-1»). Запуск был осуществлён с 5-го научно-исследовательского полигона Министерства обороны СССР «Тюра-Там» (получившего впоследствии открытое наименование космодром «Байконур») на ракете-носителе «Спутник», созданной на базе межконтинентальной баллистической ракеты «Р-7».
+                        <p style="font-size: 24px;" text-align: right;> Над созданием искусственного спутника Земли, во главе с основоположником практической космонавтики С. П. Королёвым, работали учёные М. В. Келдыш и многие другие.
+                        <p style="font-size: 24px;" text-align: right;> Запуск стал началом новой эры политических, военных, технологических и научных разработок. Дата запуска «Спутника-1» является началом космической эры человечества, а в России ежегодно отмечается как памятный день Космических войск. В честь первого искусственного спутника Земли названа равнина на поверхности Плутона.</p>
+                        </p>
+                    </div>
+                </div>
+
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+                <h2>Первые шаги к освоению космоса</h2>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+            </div>
+
+        </section>
+</div>
+
+      <div class="three-block">
+        <section id="three">
+            <div class="three">
+
+
+                <div class="container">
+                    <div class="text-box">
+<br>
+         <br>
+          <p style="font-size: 20px;" text-align: right;>В 1957 году состоялся важный момент в истории космической гонки между США и СССР, когда Советский Союз запустил в космос первый искусственный спутник Земли - Спутник-1.</p>
+
+<p style="font-size: 20px;" text-align: right;>В ответ США разработали программу «Меркурий», целью было достижение первого пилотируемого полета американца в космос. Были отправлены семь астронавтов, включая Алана Шепарда, первого американского астронавта, который совершил пилотируемый полет на космическом корабле «Меркури-Редстоун».
+</p>
+<p style="font-size: 20px;" text-align: right;>25 мая 1961 года его полет длился всего 15 минут, но это был важный шаг для программы «Меркурий» и США в целом. Шепард совершил подконтрольный полет и успешно приземлился в Атлантическом океане под парашютом.</p>
+ <p style="font-size: 20px;" text-align: right;>В то время Советский Союз разработал программу «Восток», которая включала пилотируемые полеты на кораблях с таким же названием. 12 апреля 1961 года Юрий Гагарин стал первым человеком в истории, отправившимся в космический полет на корабле «Восток-1». Его полет продолжался около 1 часа и 48 минут, он совершил один виток вокруг Земли.</p>
+ <p style="font-size: 20px;" text-align: right;>Этот успех советской программы «Восток» вызвал впечатление во всем мире и придал СССР преимущество в космической гонке. Он также стал символом научно-технического превосходства Советского Союза и вызвал большой интерес в области космических исследований.</p>
+<p style="font-size: 20px;" text-align: right;>Так началась гонка в космосе между США и СССР, которая в конечном итоге привела к значительным достижениям в области космических исследований со стороны обеих наций.</p>
+                    </div>
+                </div>
+
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+                <h2>Гонка в космосе</h2>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+            </div>
+</div>
+        </section>
+
+</div>
+
+
+             <div class="four-block">
+        <section id="four">
+            <div class="four">
+
+
+                <div class="container">
+                    <div class="text-box">
+<br>
+         <br>
+          <p style="font-size: 20px;" text-align: right;>Россия является ключевым партнером в международных космических программамах, например, Международная космическая станция (МКС). Российский сегмент МКС играет важную роль в обеспечении многих аспектов жизнеобеспечения экипажа и научных исследований. Россия также участвовала в международных экспедициях на Луну и планеты Солнечной системы.
+</p>
+
+<p style="font-size: 20px;" text-align: right;>Россия имеет богатый опыт пилотируемых полетов в космос и продолжает отправлять астронавтов на МКС. Она также работает над разработкой новых пилотируемых космических аппаратов, включая перспективный корабль "Орион" для межпланетных полетов.
+</p>
+<p style="font-size: 20px;" text-align: right;>Российские ученые активно работают над различными аспектами космической науки, включая исследования планет и Луны, солнечную физику, гравитацию и астрофизику. Россия также планирует отправить миссии на Марс и исследовать его поверхность.
+</p>
+<p style="font-size: 20px;" text-align: right;> Одной из важных программ НАСА является Artemis. Это международная инициатива, целью которой является возвращение американских астронавтов на Луну к 2024 году. В рамках программы Artemis планируется построить лунную станцию Gateway, которая будет служить базой для экспедиций на Луну.</p>
+ <p style="font-size: 20px;" text-align: right;>Планы на будущее включают исследование глубокого космоса, создание баз на других планетах, сбор образцов с астероидов, исследование черных дыр и многое другое. Главная цель человечества - расширение наших знаний о Вселенной и создание условий для будущих путешествий людей к другим планетам и звездам.</p>
+                </div>
+
+            </div>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+                <h2>Новая эра</h2>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+
+</div>
+
+        </section>
+  </div>
+
+
+             <div class="five-block">
+        <section id="five">
+            <div class="five">
+
+
+                <div class="container">
+                    <div class="text-box">
+<br>
+         <br>
+          <p style="font-size: 20px;" text-align: right;>Международная космическая станция (МКС) - это крупнейшая космическая лаборатория, которая находится на орбите Земли. МКС представляет собой совместный проект нескольких стран, включая Россию, США, Европейский союз, Японию и Канаду. Была запущена в 1998 году и продолжает действовать до сегодняшнего дня.</p>
+
+<p style="font-size: 20px;" text-align: right;>МКС представляет собой модульную станцию, состоящую из различных сегментов, которые были запущены поэтапно. Она имеет общую массу более 400 тонн и размеры примерно 109 х 73 метра, с постоянным экипажем в составе обычно от трех до шести человек.
+</p>
+<p style="font-size: 20px;" text-align: right;>Основной целью МКС является проведение научных исследований в космосе, позволяющих лучше понять влияние микрогравитации на человека, разрабатывать новые технологии и методы для полетов в космосе, исследовать космическую среду и проводить эксперименты в различных областях, включая физику, биологию, медицину и астрономию.</p>
+ <p style="font-size: 20px;" text-align: right;>На МКС есть специальное оборудование для жизнеобеспечения экипажа: системы очистки воды, фильтрации, переработки отходов и обеззараживания воздуха. Имеются специальные спальные модули, тренажерный зал и даже окна, через которые космонавты могут наблюдать Землю.</p>
+<p style="font-size: 20px;" text-align: right;>МКС является важным шагом в исследовании космоса и подготовке для будущих пилотируемых миссий на Луну, Марс и другие планеты. Она открывает путь для компаний, которые могут использовать станцию для проведения исследований и испытаний новых технологий в космосе. МКС - это прекрасный пример того, как совместные усилия могут привести к достижению великих научных исследований и открытий в невероятно сложной среде!!! </p>
+                    </div>
+                </div>
+
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+                <h2>МКС</h2>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+            </div>
+</div>
+        </section>
+             <div class="six-block">
+        <section id="six">
+            <div class="six">
+
+
+                <div class="container">
+                    <div class="text-box">
+<br>
+         <br>
+          <p style="font-size: 23px;" text-align: right;>Космическая разведка - процесс использования спутников и других космических технологий для сбора информации о Земле и других планетах. На данный момент космические разведывательные агентства уже широко используются для таких целей, и развитие технологий в этой области продолжается.</p>
+
+<p style="font-size: 23px;" text-align: right;>В будущем космические разведывательные миссии могут стать еще более эффективными и точными благодаря более продвинутым и усовершенствованным спутникам, снабженным мощными камерами и инструментами сбора данных. Будущая технология может позволить увеличить разрешение спутниковой фотографии и улучшить качество получаемой разведывательной информации.
+</p>
+<p style="font-size: 23px;" text-align: right;>Возможно появление новых методов и технологий для сбора разведывательной информации, таких как использование искусственного интеллекта и машинного обучения. Это позволит лучше анализировать собранную информацию, выявлять тенденции и извлекать полезные данные для различных целей, включая область безопасности, геополитики и научных исследований.</p>
+ <p style="font-size: 23px;" text-align: right;>
+Хотя конкретные детали будущих космических разведывательных миссий сложно предугадать, можно с уверенностью сказать, что с развитием технологий будут открываться новые возможности для эффективного сбора разведывательной информации в космосе.</p>
+                    </div>
+                </div>
+
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+                <h2>Космическая разведка</h2>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+            </div>
+</div>
+        </section>
+
+
+             <div class="seven-block">
+        <section id="seven">
+            <div class="seven">
+
+
+                <div class="container">
+                    <div class="text-box">
+<br>
+         <br>
+          <p style="font-size: 23px;" text-align: right;>Одна из важнейших миссий будущего - это исследование Марса. Различные космические организации работают над разработкой и отправкой миссий на Марс для изучения атмосферы, геологии и возможной наличия жизни на этой планете. Такие миссии предполагают отправку роверов и даже астронавтов на поверхность Марса, чтобы проводить более детальные исследования.</p>
+
+<p style="font-size: 23px;" text-align: right;>Кроме того, спутниковая технология будет продолжать развиваться, и будущие миссии будут стремиться к более точному мониторингу Земли. Это включает наблюдение за изменениями климата, дефорестацией, изменением уровня морей и другими глобальными проблемами. Космическая разведка будет играть важную роль в сборе данных для принятия важных решений в области окружающей среды и климатических изменений.
+</p>
+<p style="font-size: 23px;" text-align: right;>В будущем миссии в космосе будут становиться все более амбициозными и удивительными. Мы будем свидетелями новых открытий, расширения границ исследования исключительных мест, а также расширения нашего понимания о Вселенной. Это волнующее период в истории человечества, и мы можем ожидать захватывающих приключений в космосе!</p>
+ <p style="font-size: 23px;" text-align: right;>Мы с вами можем столько сделать для человечества и России, давайте же развивать росссийскую науку во имя космоса и счастливого будущего!!!</p>
+                    </div>
+                </div>
+
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+                <h2>Миссии будущего</h2>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+            </div>
+</div>
+        </section>
+
+
+
+
+             <div class="eight-block">
+        <section id="eight">
+            <div class="eight">
+
+
+                <div class="container">
+                    <div class="text-box">
+<br>
+          <p style="font-size: 21px;" text-align: right;>Развивая космическую технологию, мы создаем новые и инновационные продукты и услуги, которые улучшают нашу повседневную жизнь:солнечные батареи, GPS систему, различные материалы и технологии, которые мы используем в нашей жизни.</p>
+
+<p style="font-size: 21px;" text-align: right;>Космические исследования требуют сбора и анализа огромного объема данных. Развитие способностей обработки данных, хранения и передачи информации в течение последних десятилетий помогло улучшить нашу коммуникацию, навигацию, прогнозы погоды и многое другое.
+</p>
+<p style="font-size: 21px;" text-align: right;>Космическое пространство даёт вызовы для человеческого организма, и исследования, проводимые астронавтами, помогают науке лучше понять влияние космической среды на здоровье. Это привело к разработке новых методов лечения и технологий, например, телемедицина( получение медицинской помощи на расстоянии).
+</p>
+ <p style="font-size: 21px;" text-align: right;>Космические снимки позволяют отслеживать состояние посевов, определять заболевания, оценивать уровень урожайности и прогнозировать погодные условия. Это помогает улучшить сельскохозяйственное производство, урожайность и снизить негативное влияние на окружающую среду.</p>
+   <p style="font-size: 21px;" text-align: right;>Исследования космоса помогают нам лучше понять климатические изменения, состояние океана, загрязнение атмосферы и другие проблемы окружающей среды. Эти данные дают разрабатывать новые стратегии по защите природы и сокращению вредных воздействий на планету.</p>
+
+                    </div>
+                </div>
+
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+                <h2>Заключение</h2>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+            </div>
+</div>
+        </section>
+
+
+<section id="test">
+
+<div class="victorina">
+
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+                <h2 tyle: align="center">Викторина!!!</h2>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+
+        <div id="test">
+            <div>
+                <p>Как назывался первый искусственный спутник?
+                <br>
+                <br>1.Спутник-1
+                <br>2.Восток-2
+                <br>3.Земля
+                <br>4.Спутник-2</p>
+                <input>
+            </div>
+            <div>
+                <p>Сколько длился полёт Юрия Гагарина в космосе?
+                <br>
+                <br>1.15 минут
+                <br>2.1 час 48 минут
+                <br>3.6 часов 37 минут
+                <br>4.2 часа 5 минут
+                </p>
+                <input>
+            </div>
+            <div>
+                <p>Как называется перспективный корабль, разрабатываемый российскими учёными?
+                <br>
+                <br>1.Геркулес
+                <br>2.Весы
+                <br>3.Орион
+                <br>4.Спутник
+                </p>
+                <input>
+            </div>
+            <div>
+                <p>В каком году была запущение МКС?
+                <br>
+                <br>1.1995
+                <br>2.1996
+                <br>3.1997
+                <br>4.1998</p>
+                <input>
+            </div>
+            <div>
+                <p>Исследованию какой планеты уделяется наибольшое количесвто времени?
+                <br>
+                <br>1.Венера
+                <br>2.Меркурий
+                <br>3.Сатурн
+                <br>4.Плутон
+                <br>5.Марс
+                 </p>
+                <input>
+            </div>
+            <div>
+                <p>Что такое МКС?
+                <br>
+                 <br>1.Межнациональная космическая станция
+                <br>2.Международная керамическая станция
+                <br>3.Межгалактическая керамическая станция
+                <br>4.Международно-галактическая космическая станция
+                <br>5.Межгалактическая космическая станция
+                <br>6.Международная космическая станция
+                </p>
+                <input>
+            </div>
+            </div>
+        <button id="button">check</button>
+       </div>
+
+    <script>
+        let button=document.querySelector('#button');
+
+        let rightAnswer=[1,2,3,4,5,6,7,8]
+        button.addEventListener('click', function(){
+            let inputs=document.querySelectorAll('#test input');
+
+            let i=0;
+            for (let input of inputs){
+                if(input.value==rightAnswer[i]){
+
+                    input.classList.add('correct');
+                } else{
+                    input.classList.add('incorrect');
+                }
+
+                i++
+            }
+        });
+    </script>
+</div>
+</section>
+
+<section id="weight">
+    <div class="weight">
+     <hr align="center" width="1000" size="1" color=" #eddfe2" />
+                <h2 tyle: align="center">Калькулятор массы на разных планетах</h2>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+
+    <label for="earth-weight">Введите свой вес в килограммах:</label>
+    <input type="text" id="earth-weight" />
+
+    <button onclick="calculateWeight()">Calculate Weight</button>
+
+    <p style="font-size: 21px;" text-align: right;  >Твоя масса на других планетах:</p>
+    <div id="result-container"></div>
+
+    <script>
+        function calculateWeight() {
+            // Получили вес
+            var earthWeightInput = document.getElementById('earth-weight');
+            var earthWeight = parseFloat(earthWeightInput.value);
+
+            // Проверяем, введено ли корректное значение
+            if (isNaN(earthWeight) || earthWeight <= 0) {
+                alert('Введите корректное значение веса в килограммах, пожалуйста.');
+                return;
+            }
+
+
+            var planets = [
+                { name: 'Меркурий', gravity: 0.38 },
+                { name: 'Венера', gravity: 0.91 },
+                { name: 'Марс', gravity: 0.38 },
+                { name: 'Юпитер', gravity: 2.34 },
+                { name: 'Сатурн', gravity: 1.06 },
+                { name: 'Уран', gravity: 0.92 },
+                { name: 'Нептун', gravity: 1.19 },
+                { name: 'Плутон', gravity: 0.06 }
+            ];
+
+            var resultContainer = document.getElementById('result-container');
+            resultContainer.innerHTML = '';
+
+            planets.forEach(function (planet) {
+                var planetLabel = document.createElement('div');
+                planetLabel.classList.add('planet-label');
+                planetLabel.innerHTML = planet.name + ':';
+
+                var result = document.createElement('div');
+                result.classList.add('result');
+                result.innerHTML = (earthWeight * planet.gravity).toFixed(2) + ' kg';
+
+                resultContainer.appendChild(planetLabel);
+                resultContainer.appendChild(result);
+            });
+        }
+    </script>
+<br>
+   <br>
+    <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+                <h2 tyle: align="center">Немного о календарях</h2>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+   <p style="font-size: 21px;" text-align: right;>В течение более шестидесяти лет судьбоносное для России событие отмечалось каждый год 7 ноября, хотя само событие носит имя не ноябрьской, а октябрьской революции. Всем известно формальное объяснение этого расхождения — разница в 13 дней между «старым» и «новым» стилями, точнее между юлианским и григорианским календарями.</p>
+        <p style="font-size: 21px;" text-align: right;>Любители истории знают, что юлианский календарь назван так в честь древнеримского государственного и политического деятеля, диктатора и великого понтифика (жреца) Юлия Цезаря, а григорианский — в честь Папы Римского Григория XIII. Но на вопрос, а зачем в 1582 году понадобилось изменить календарь, применявшийся свыше полутора тысяч лет, редко можно получить вразумительный ответ. Автор (преподаватель физики в инженерном вузе) неоднократно задавал этот вопрос студентам при знакомстве с азами кинематики вращательного движения. За последние 10 лет более или менее приемлемый ответ могли дать в среднем один-два студента из ста.</p>
+        <p style="font-size: 21px;" text-align: right;>Рассмотри календари:
+        <br>1. Юлианский
+
+В 45 году до нашей эры император Юлий Цезарь ввёл юлианский календарь. Он был удобнее старого римского, но идеальной точностью всё равно не обладал: за 128 лет накапливались одни неучтённые сутки.
+
+<br>2. Григорианский
+
+Из-за неточности юлианского календаря в XVI веке Пасха стала наступать раньше положенного срока. Поэтому римский папа Григорий XIII в 1582 году заменил календарь на новый — григорианский.
+
+Однако в России церковь продолжила пользоваться старым календарём. Григорианский ввели только в 1918 году. Он прижился «в миру», но церковь так и не приняла изменений.
+
+<br>3. Новоюлианский
+
+В 1923 году в Константинополе состоялось совещание православных церквей разных стран по «календарному вопросу». Решили ввести новоюлианский календарь, который будет совпадать с григорианским до 2800 года.
+Патриарх Тихон тоже издал постановление о переходе на новоюлианский календарь в России, но это вызвало протесты верующих — и переход пришлось отменить.
+
+<br>Так по какому календарю мы отмечаем праздники?
+
+<br>Мы празднуем Рождество 7 января — по юлианскому календарю. Новый год — 1 января, вместе со всем миром: то есть по григорианскому или новоюлианскому календарю.
+<br> А вот и простой астрономический календарь, написанный при помощи JavaScript:
+</p>
+<br>
+    <script>
+      function createCalendar() {
+        // получаем текущую дату
+        var currentDate = new Date();
+
+        // функция для получения астрономических событий
+        function getAstronomicalEvents(month, date) {
+          var events = [];
+
+
+
+          return events;
+        }
+
+        // создаем таблицу календаря
+        var calendarTable = document.createElement("table");
+
+        // создаем заголовок календаря
+        var calendarCaption = calendarTable.createCaption();
+        calendarCaption.innerHTML =
+          "Астрономический календарь " + currentDate.getFullYear();
+
+        // создаем заголовки для дней недели
+        var daysOfWeek = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
+        var headerRow = calendarTable.insertRow();
+        for (var i = 0; i < daysOfWeek.length; i++) {
+          var headerCell = headerRow.insertCell();
+          headerCell.innerHTML = daysOfWeek[i];
+        }
+
+        // получаем первый день текущего месяца
+        var firstDay = new Date(
+          currentDate.getFullYear(),
+          currentDate.getMonth(),
+          1
+        );
+
+        // получаем последний день текущего месяца
+        var lastDay = new Date(
+          currentDate.getFullYear(),
+          currentDate.getMonth() + 1,
+          0
+        );
+
+        // добавляем ячейки для каждого дня месяца
+        var currentRow;
+        var dayCount = 1;
+
+        for (var row = 0; row < 6; row++) {
+          currentRow = calendarTable.insertRow();
+
+          for (var col = 0; col < 7; col++) {
+            var currentCell = currentRow.insertCell();
+
+            // если день находится в текущем месяце
+            if (
+              (row === 0 && col >= firstDay.getDay()) ||
+              (row > 0 && dayCount <= lastDay.getDate())
+            ) {
+              // устанавливаем число дня
+              currentCell.innerHTML = dayCount;
+
+              // получаем астрономические события для данного дня
+              var astronomicalEvents = getAstronomicalEvents(
+                currentDate.getMonth(),
+                dayCount
+              );
+
+              // если есть события, добавляем их в ячейку
+              if (astronomicalEvents.length > 0) {
+                var eventList = document.createElement("ul");
+                for (var i = 0; i < astronomicalEvents.length; i++) {
+                  var eventItem = document.createElement("li");
+                  eventItem.innerHTML = astronomicalEvents[i];
+                  eventList.appendChild(eventItem);
+                }
+                currentCell.appendChild(eventList);
+              }
+
+              dayCount++;
+            } else {
+              break;
+            }
+          }
+        }
+
+        // вставляем таблицу календаря в контейнер
+        var calendarContainer = document.getElementById("calendar");
+        calendarContainer.innerHTML = "";
+        calendarContainer.appendChild(calendarTable);
+      }
+
+      // создаем календарь при загрузке страницы
+      window.onload = createCalendar;
+    </script>
+    <div id="calendar"></div>
+    <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+                <h2 tyle: align="center">Использованная литература</h2>
+                <hr align="center" width="1000" size="1" color=" #eddfe2 " />
+        <p style="font-size: 21px;" text-align: right;>Информация про календари: <u>https://xn--90aivcdt6dxbc.xn--p1ai/articles/questions/kultura/kulturnye_meropriyatiya/staryy_i_novyy_stil_chem_otlichayutsya_kalendari/</u>, © АНО «Национальные приоритеты», 2022-2023</p>
+        <p style="font-size: 21px;" text-align: right;>Информация про космос: <u>http://ru.wikipedia.org</u>, Wikipedia-2013, свободная энциклопедия</p>
+</div>
+</section>
+</body>
+</html>
+
